@@ -1,0 +1,31 @@
+//+------------------------------------------------------------------+
+//|                                          FInancialMarkettest.mq5 |
+//|                                  Copyright 2020, Amen O. Olabode |
+//|                                        http://bit.ly/OlabodeAmen |
+//+------------------------------------------------------------------+
+#property copyright "Copyright 2020, Amen O. Olabode"
+#property link      "http://bit.ly/OlabodeAmen"
+#property version   "1.00"
+//+------------------------------------------------------------------+
+//| Script program start function                                    |
+//+------------------------------------------------------------------+
+void OnStart()
+  {
+  double priceLevel1 = 1.17300;
+  double priceLevel2 = 1.18500;
+  double Bid = SymbolInfoDouble(_Symbol,SYMBOL_BID);
+  
+  Alert ("Current Price: " +string(Bid));
+  
+  if (priceLevel1 > 1.17300){
+   Alert("BUY VOLUME");
+  } 
+  else if(priceLevel2 < 1.18500){
+   Alert("SELL VOLUME");
+  } 
+  else {
+  Alert("WATCH THE MARKETS");
+  }
+   
+  }
+//+------------------------------------------------------------------+
